@@ -1,0 +1,107 @@
+/* ===== Tema: Teal + Amber, navigasi di atas ===== */
+:root{
+  --primary:#0f766e; --primary-dark:#115e59; --primary-soft:#ccfbf1;
+  --accent:#f59e0b;
+  --danger:#dc2626; --success:#16a34a;
+  --bg:#f1f6f5; --card:#ffffff; --border:#dbe6e4; --text:#16302d; --muted:#5f7a76;
+  --nav-bg:#0b3b38; --nav-text:#c7e3df;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:var(--bg);color:var(--text)}
+a{color:var(--primary);text-decoration:none}
+
+/* ---------- Navigasi atas ---------- */
+.topnav{position:sticky;top:0;z-index:50;background:var(--nav-bg);color:#fff;
+  border-bottom:3px solid var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.topnav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:22px}
+.brand{font-size:17px;font-weight:700;color:#fff;letter-spacing:.2px;white-space:nowrap}
+.brand:hover{color:#fff}
+.brand span{color:var(--accent)}
+.nav-menu{display:flex;align-items:center;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
+.nav-menu::-webkit-scrollbar{display:none}
+.nav-menu a{padding:8px 13px;border-radius:8px;color:var(--nav-text);font-size:14px;white-space:nowrap;transition:background .15s,color .15s}
+.nav-menu a:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav-menu a.active{background:var(--accent);color:#3b2400;font-weight:600}
+.nav-user{display:flex;align-items:center;gap:12px;white-space:nowrap}
+.user-chip{text-align:right;line-height:1.25}
+.user-chip strong{display:block;font-size:13px}
+.user-chip small{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px}
+.nav-user .logout{padding:7px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.3);color:#fff;font-size:13px}
+.nav-user .logout:hover{background:#dc2626;border-color:#dc2626;color:#fff}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:8px;
+  width:40px;height:36px;font-size:20px;line-height:1;cursor:pointer;margin-left:auto}
+
+/* ---------- Konten ---------- */
+.main{max-width:1280px;margin:0 auto;padding:28px 24px 48px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.topbar h1{font-size:22px;margin:0;color:var(--primary-dark);padding-left:12px;border-left:4px solid var(--accent)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px;
+  box-shadow:0 1px 3px rgba(15,60,56,.05);overflow-x:auto}
+
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:left}
+th{background:#e8f3f1;font-weight:600;color:var(--primary-dark)}
+tr:hover td{background:#f5faf9}
+
+.btn{display:inline-block;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;font-size:13px;font-weight:600;transition:filter .15s,background .15s}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-danger{background:var(--danger);color:#fff}
+.btn-success{background:var(--success);color:#fff}
+.btn-muted{background:#dcebe8;color:#25423e}
+.btn:hover{filter:brightness(.95)}
+.btn-sm{padding:5px 10px;font-size:12px}
+
+form.inline{display:inline}
+label{display:block;font-size:13px;margin:10px 0 4px;font-weight:600;color:var(--muted)}
+input,select,textarea{width:100%;padding:9px 10px;border:1px solid var(--border);border-radius:8px;font-size:14px;background:#fff;color:var(--text)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(15,118,110,.18)}
+.form-actions{margin-top:18px;display:flex;gap:10px}
+
+.badge{padding:3px 10px;border-radius:20px;font-size:12px;font-weight:600}
+.badge-diajukan{background:#fef3c7;color:#92400e}
+.badge-dipinjam{background:#dbeafe;color:#1e40af}
+.badge-selesai{background:#dcfce7;color:#166534}
+.badge-ditolak{background:#fee2e2;color:#991b1b}
+.badge-none{background:#e2ece9;color:#475569}
+
+.alert{padding:12px 16px;border-radius:8px;margin-bottom:16px;font-size:14px}
+.alert-success{background:#dcfce7;color:#166534;border:1px solid #bbf7d0}
+.alert-error{background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
+
+/* ---------- Login / Register ---------- */
+.login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;
+  background:radial-gradient(circle at 15% 20%,rgba(245,158,11,.25),transparent 40%),linear-gradient(135deg,#0b3b38,#0f766e)}
+.login-box{background:#fff;padding:36px;border-radius:16px;width:100%;max-width:360px;
+  border-top:5px solid var(--accent);box-shadow:0 20px 45px rgba(0,0,0,.3)}
+.login-box h1{font-size:21px;margin:0 0 4px;text-align:center;color:var(--primary-dark)}
+.login-box p{text-align:center;color:var(--muted);font-size:13px;margin-top:0;margin-bottom:22px}
+.login-box .alt-link{text-align:center;margin:16px 0 0;font-size:13px;color:var(--muted)}
+
+/* ---------- Statistik ---------- */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:22px}
+.stat{background:var(--card);border:1px solid var(--border);border-top:4px solid var(--primary);border-radius:var(--radius);padding:18px;
+  box-shadow:0 1px 3px rgba(15,60,56,.05)}
+.stat:nth-child(even){border-top-color:var(--accent)}
+.stat .num{font-size:27px;font-weight:700;color:var(--primary-dark)}
+.stat .label{color:var(--muted);font-size:13px}
+
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;flex-wrap:wrap}
+.search-box{max-width:260px}
+
+.rincian td{border-bottom:1px dashed var(--border)}
+.rincian tr.total td{font-weight:700;border-bottom:none}
+.hint{font-size:12px;color:var(--muted);margin:4px 0 0}
+
+/* ---------- Responsif ---------- */
+@media (max-width:900px){
+  .topnav-inner{flex-wrap:wrap;height:auto;min-height:56px;padding:8px 16px;gap:8px}
+  .nav-toggle{display:block}
+  .nav-menu,.nav-user{display:none;width:100%}
+  .topnav.open .nav-menu{display:flex;flex-direction:column;align-items:stretch;overflow:visible}
+  .topnav.open .nav-user{display:flex;justify-content:space-between;padding:8px 0 4px;border-top:1px solid rgba(255,255,255,.15)}
+  .main{padding:20px 14px 40px}
+}
+
+@media print{ .topnav,.topbar,.no-print{display:none !important} .main{padding:0;max-width:none} .card{box-shadow:none;border:none} }
